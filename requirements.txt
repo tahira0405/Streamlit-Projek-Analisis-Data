@@ -2,8 +2,6 @@ matplotlib
 pandas
 seaborn
 streamlit
-glob
 folium
-pandas
-geopy.geocoders
-streamlit_folium
+geopy
+streamlit-folium
