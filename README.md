@@ -1,14 +1,23 @@
 # Dashboard Info Kualitas Udara Stasiun China
 
 ## Setup Environment - Anaconda
+```sh
+conda create --name proyek_analisis_data python=3.9
+conda activate proyek_analisis_data
+pip install -r requirements.txt
+```
 
-Proyek ini dibuat menggunakan Python dan Streamlit untuk analisis data kualitas udara.
+## Setup Environment - Shell/Terminal
+```sh
+mkdir proyek_analisis_data
+cd proyek_analisis_data
+pipenv install
+pipenv shell
+pip install -r requirements.txt
+```
 
-## Cara Menjalankan
-1. Pastikan Python sudah terinstal.
-2. Instal dependensi dengan `pip install -r requirements.txt`.
-3. Jalankan dengan `streamlit run streamlit-proyek-analisis-data.py`.
-
-## Dataset
-Dataset yang digunakan adalah data kualitas udara dari sumber XYZ.
+## Run streamlit.app
+```sh
+streamlit run dashboard.py
+```
 
