@@ -276,18 +276,6 @@ elif page == "Faktor Alam vs Polusi Udara":
             st.write(f"Korelasi antara PM 10 dan {nature_title[idx]}: {corr_value}")
 
 
-        # Membuat diagram korelasi PM 10 dan faktor alam
-
-        with col2:
-            fig, ax = plt.subplots(figsize=(12, 6))
-            sns.scatterplot(data=PRSA_df,
-                             x=elemen,
-                            y="PM10", facecolor="skyblue")
-            ax.set_title(f"Correlation of 10 and {elemen}", fontsize=20)
-            st.pyplot(fig)
-            corr_value = PRSA_df["PM2.5"].corr(PRSA_df["TEMP"])
-            st.write(f"Korelasi antara PM 10 dan {nature_title[idx]}: {corr_value}")
-
 # Membuat peta geospasial
 
 elif page == 'Peta Geospasial':
