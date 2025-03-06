@@ -243,8 +243,8 @@ if page == "Stasiun mana yang paling tercemar?":
 elif page == "Faktor Alam vs Polusi Udara":
 
     st.markdown(f"## Faktor Alam vs PM 2.5 dan PM 10")
-    nature = ["RAIN", "TEMP", "PRES", "WSPM"]
-    nature_title = ["hujan", "temperatur", "tekanan"]
+    nature = ["RAIN", "TEMP", "PRES"]
+    nature_title = ["Rain", "Temperature", "Atmospheric Pressure"]
 
     for idx, elemen in enumerate(nature):    
 
@@ -262,6 +262,19 @@ elif page == "Faktor Alam vs Polusi Udara":
             st.pyplot(fig)
             corr_value = PRSA_df["PM2.5"].corr(PRSA_df["RAIN"])
             st.write(f"Korelasi antara PM 2.5 dan {nature_title[idx]}: {corr_value}")
+
+        # Membuat diagram korelasi PM 10 dan faktor alam
+
+        with col2:
+            fig, ax = plt.subplots(figsize=(12, 6))
+            sns.scatterplot(data=PRSA_df,
+                             x=elemen,
+                            y="PM10", facecolor="skyblue")
+            ax.set_title(f"Correlation of 10 and {nature_title[idx]}", fontsize=20)
+            st.pyplot(fig)
+            corr_value = PRSA_df["PM2.5"].corr(PRSA_df["TEMP"])
+            st.write(f"Korelasi antara PM 10 dan {nature_title[idx]}: {corr_value}")
+
 
         # Membuat diagram korelasi PM 10 dan faktor alam
 
