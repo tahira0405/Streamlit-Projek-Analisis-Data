@@ -2,16 +2,24 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 import streamlit as st
-import glob
 import folium
 import pandas as pd
-from geopy.geocoders import Nominatim
 from streamlit_folium import st_folium
 
 # Gathering Data
 
-file_list = glob.glob("PRSA_Data/*.csv")
-PRSA_df_first = pd.concat((pd.read_csv(file) for file in file_list), ignore_index=True)
+Aotizhongxin_df = pd.read_csv("Air set-Aotizhongxin.csv")
+Changping_df = pd.read_csv("Air set-Changping.csv")
+Dingling_df = pd.read_csv("Air set-Dingling.csv")
+Dongsi_df = pd.read_csv("Air set-Dongsi.csv")
+Guanyuan_df = pd.read_csv("Air set-Guanyuan.csv")
+Gucheng_df = pd.read_csv("Air set-Gucheng.csv")
+Huairou_df = pd.read_csv("Air set-Huairou.csv")
+Nongzhanguan_df = pd.read_csv("Air set-Nongzhanguan.csv")
+Shunyi_df = pd.read_csv("Air set-Shunyi.csv")
+Tiantan_df = pd.read_csv("Air set-Tiantan.csv")
+Wanliu_df = pd.read_csv("Air set-Wanliu.csv")
+Wanshouxigong_df = pd.read_csv("Air set-Wanshouxigong.csv")
 
 NUMBER_OF_ROW_FOR_EVERY_STATION = 35064
 
