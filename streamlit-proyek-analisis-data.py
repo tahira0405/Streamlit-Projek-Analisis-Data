@@ -21,6 +21,11 @@ Tiantan_df = pd.read_csv("Air set-Tiantan.csv")
 Wanliu_df = pd.read_csv("Air set-Wanliu.csv")
 Wanshouxigong_df = pd.read_csv("Air set-Wanshouxigong.csv")
 
+list_data = [Aotizhongxin_df, Changping_df, Dingling_df, Dongsi_df, Guanyuan_df, Gucheng_df,
+             Huairou_df, Nongzhanguan_df, Shunyi_df, Tiantan_df, Wanliu_df, Wanshouxigong_df]
+
+PRSA_df_first = pd.concat(list_data, ignore_index=True)
+
 NUMBER_OF_ROW_FOR_EVERY_STATION = 35064
 
 # Data Wragling
