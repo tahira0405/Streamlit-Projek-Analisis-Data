@@ -1,4 +1,4 @@
-matplotlib.pyplot
+matplotlib
 pandas
 seaborn
 streamlit
@@ -6,4 +6,4 @@ glob
 folium
 pandas
 geopy.geocoders
-streamlit_foliumS
+streamlit_folium
